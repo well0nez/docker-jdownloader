@@ -4,7 +4,7 @@ LABEL maintainer="Jay MOULIN <jaymoulin@gmail.com> <https://twitter.com/MoulinJa
 
 RUN mkdir -p /opt/JDownloader/ && \
     apt-get update  && \
-    apt-get install openjdk-7-jre-headless procps --no-install-recommends  && \
+    apt-get install openjdk-7-jre-headless procps -y --no-install-recommends  && \
     wget -O /opt/JDownloader/JDownloader.jar "http://installer.jdownloader.org/JDownloader.jar?$RANDOM" && \
     chmod +x /opt/JDownloader/JDownloader.jar && \
     wget -O /usr/bin/tini "https://github.com/krallin/tini/releases/download/v0.18.0/tini-armhf" --no-check-certificate && \
